@@ -1,0 +1,9 @@
+footer{
+    width:100vw;
+    height:100px;
+    bottom:0;
+    background-color: rgb(255, 255, 255);
+}
+.footer-cont{
+    margin:auto;
+}
