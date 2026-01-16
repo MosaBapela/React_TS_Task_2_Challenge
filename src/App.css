@@ -5,13 +5,37 @@
 }
 
 .header {
-  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); 
+  position: relative;
+  display: block;
+  background: linear-gradient(90deg, var(--primary) 0%, rgba(75,107,255,0.85) 100%);
   color: white;
-  padding: 25px 20px; 
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 1.8em; 
-  letter-spacing: 1px;
+  padding: 18px 56px; /* allow space for hamburger and action */
+  box-shadow: 0 6px 18px var(--shadow);
+  font-size: 1.25rem;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  min-height: 56px;
+}
+
+.header-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 600;
+}
+
+.header-action { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
+.header-action .addButton { /* keep same style as content add button */
+  background: var(--primary);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 20px var(--shadow);
 }
 
 .main-content {

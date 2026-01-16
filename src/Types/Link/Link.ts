@@ -3,5 +3,6 @@ export interface Link {
     title: string;
     url: string;
     description: string;
-    tags: string[];
+  tags: string[];
+  category: string;
   }

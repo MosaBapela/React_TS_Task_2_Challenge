@@ -1,9 +1,11 @@
-footer{
-    width:100vw;
-    height:100px;
-    bottom:0;
-    background-color: rgb(255, 255, 255);
+.root{
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    /* use the page's background color so the footer visually matches */
+    background-color: inherit;
 }
+
 .footer-cont{
-    margin:auto;
+    margin: auto;
 }
