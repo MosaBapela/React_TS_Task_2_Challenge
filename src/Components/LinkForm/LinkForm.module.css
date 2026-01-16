@@ -23,6 +23,7 @@
   .link-form h2 {
     margin-top: 0;
     color: #007bff;
+    color: var(--ws-accent);
     font-size: 1.6em;
     margin-bottom: 20px;
     text-align: center;
@@ -48,11 +49,22 @@
     font-size: 1em;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
+
+  .form-group select {
+    width: 100%;
+    padding: 10px 36px 10px 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5' stroke='%236b4b3b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") no-repeat right 10px center;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 1em;
+  }
   
   .form-group input:focus,
   .form-group textarea:focus {
-    border-color: #007bff; 
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); 
+    border-color: var(--ws-primary); 
+    box-shadow: 0 0 0 4px rgba(255,107,53,0.12); 
     outline: none;
   }
   
@@ -81,24 +93,25 @@
   }
   
   .save-button {
-    background-color: #28a745; 
-    color: white;
-  }
-  
+      background-color: var(--ws-primary);
+      color: white;
+    }
+
   .save-button:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
+      background-color: #ff804f;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px var(--ws-shadow);
+    }
+
   .cancel-button {
-    background-color: #6c757d; 
-    color: white;
-  }
-  
+      background-color: transparent;
+      color: var(--ws-muted);
+      border: 1px solid rgba(107,75,59,0.06);
+    }
+
   .cancel-button:hover {
-    background-color: #5a6268;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+      background-color: #fff3ee;
+      color: var(--ws-accent);
+      transform: translateY(-2px);
+    }
   

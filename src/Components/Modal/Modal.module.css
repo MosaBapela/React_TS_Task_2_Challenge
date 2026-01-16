@@ -47,25 +47,26 @@
   }
   
   .modal-confirm-button {
-    background-color: #dc3545; 
+    background-color: var(--ws-accent);
     color: white;
   }
-  
+
   .modal-confirm-button:hover {
-    background-color: #c82333;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #8a2a00;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px var(--ws-shadow);
   }
-  
+
   .modal-cancel-button {
-    background-color: #6c757d; 
-    color: white;
+    background-color: transparent;
+    color: var(--ws-muted);
+    border: 1px solid rgba(107,75,59,0.06);
   }
-  
+
   .modal-cancel-button:hover {
-    background-color: #5a6268;
+    background-color: #fff3ee;
+    color: var(--ws-accent);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   @keyframes fadeIn {

@@ -1,8 +1,38 @@
+:root{
+  /* Warm Sunset palette */
+  --ws-bg: #fff7f5;
+  --ws-card: #fff6f3;
+  --ws-primary: #ff6b35; /* vivid warm */
+  --ws-accent: #b33a00; /* deeper accent */
+  --ws-secondary: #ffb88c; /* soft warm */
+  --ws-muted: #6b4b3b;
+  --ws-tag-bg: #fff1e8;
+  --ws-shadow: rgba(179,58,0,0.08);
+  --ws-scrim: rgba(11,2,1,0.45);
+  --base-font: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--base-font);
   margin: 0;
   padding: 0;
-  background-color: #eef2f6; 
-  color: #333;
+  background-color: var(--ws-bg);
+  color: var(--ws-accent);
   line-height: 1.6;
 }
+
+/* Global alias for the in-repo hashed edit button class so other elements can reuse its look */
+._edit-button_t76q2_155 {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  background: var(--ws-primary);
+  box-shadow: 0 6px 18px var(--ws-shadow);
+  transition: background-color 0.22s ease, transform 0.16s ease;
+}
+
+._edit-button_t76q2_155:hover { transform: translateY(-3px); filter: brightness(0.96); }
+
