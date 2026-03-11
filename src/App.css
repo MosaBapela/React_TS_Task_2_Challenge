@@ -1,4 +1,3 @@
-/* ── App shell ─────────────────────────────────────────────────────────────── */
 .app-container {
   display: flex;
   flex-direction: column;
@@ -6,7 +5,6 @@
   background: var(--bg-primary);
 }
 
-/* ── Top navbar ─────────────────────────────────────────────────────────────── */
 .header {
   position: sticky;
   top: 0;
@@ -16,14 +14,13 @@
   justify-content: space-between;
   padding: 0 28px;
   height: 62px;
-  background: rgba(13,17,23,0.85);
+  background: rgba(13,17,23,0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-/* left brand */
 .header-brand {
   display: flex;
   align-items: center;
@@ -40,7 +37,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px var(--accent-glow);
   flex-shrink: 0;
 }
 
@@ -52,7 +48,6 @@
   color: var(--text-primary);
 }
 
-/* right action area */
 .header-action {
   display: flex;
   align-items: center;
@@ -64,26 +59,25 @@
   align-items: center;
   gap: 7px;
   padding: 9px 18px;
-  background: linear-gradient(135deg, var(--accent) 0%, #6d28d9 100%);
+  background: var(--accent);
   color: #fff;
   border: none;
   border-radius: var(--radius-md);
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: var(--shadow-accent);
+  box-shadow: var(--shadow-md);
   transition: transform 0.18s ease, filter 0.18s ease;
   white-space: nowrap;
 }
 
 .addButton:hover {
   transform: translateY(-2px);
-  filter: brightness(1.12);
+  filter: brightness(1.1);
 }
 
 .addButton:active { transform: translateY(0); }
 
-/* ── Main layout ─────────────────────────────────────────────────────────────── */
 .main-content {
   flex: 1;
   width: 100%;
@@ -97,4 +91,3 @@
   .main-content { padding: 20px 14px 30px; }
   .header-title { font-size: 0.95rem; }
 }
-

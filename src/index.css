@@ -1,34 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Deep Space palette */
   --bg-primary:    #0d1117;
   --bg-secondary:  #161b22;
   --bg-card:       #1c2333;
   --bg-card-hover: #212940;
   --bg-glass:      rgba(255,255,255,0.04);
 
-  --accent:        #7c3aed;       /* vivid violet */
+  --accent:        #7c3aed;
   --accent-light:  #a78bfa;
-  --accent-glow:   rgba(124,58,237,0.35);
+  --accent-glow:   rgba(124,58,237,0.15);
 
   --teal:          #14b8a6;
-  --teal-glow:     rgba(20,184,166,0.25);
 
   --danger:        #ef4444;
-  --danger-glow:   rgba(239,68,68,0.25);
 
   --text-primary:  #e6edf3;
   --text-secondary:#8b949e;
   --text-muted:    #484f58;
 
   --border:        rgba(255,255,255,0.07);
-  --border-active: rgba(124,58,237,0.5);
+  --border-active: rgba(124,58,237,0.45);
 
   --shadow-sm:     0 1px 4px rgba(0,0,0,0.4);
   --shadow-md:     0 4px 20px rgba(0,0,0,0.5);
   --shadow-lg:     0 12px 40px rgba(0,0,0,0.6);
-  --shadow-accent: 0 8px 28px rgba(124,58,237,0.35);
+  --shadow-accent: 0 4px 14px rgba(0,0,0,0.4);
 
   --radius-sm:  6px;
   --radius-md:  10px;
@@ -50,13 +47,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* scrollbar */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
 ::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 99px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
 
-/* Global button reset alias — kept for backward compat */
 ._edit-button_t76q2_155 {
   padding: 9px 16px;
   border: none;
@@ -70,4 +65,3 @@ body {
   transition: transform 0.18s ease, filter 0.18s ease;
 }
 ._edit-button_t76q2_155:hover { transform: translateY(-2px); filter: brightness(1.1); }
-

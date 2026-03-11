@@ -66,7 +66,6 @@ export const MainContent: React.FC<Props> = ({
   return (
     <section className={styles.main}>
 
-      {/* ── Stats bar ── */}
       <div className={styles.statsRow}>
         <M.div whileHover={{ scale: 1.03 }} className={styles.statCard}>
           <span className={styles.statValue}>{totalLinks}</span>
@@ -87,7 +86,6 @@ export const MainContent: React.FC<Props> = ({
         </M.div>
       </div>
 
-      {/* ── Search + filter bar ── */}
       <div className={styles.toolbar}>
         <div className={styles.searchWrap}>
           <SearchBar searchQuery={searchQuery} onSearch={onSearch} />
@@ -103,7 +101,6 @@ export const MainContent: React.FC<Props> = ({
         )}
       </div>
 
-      {/* ── Category tabs ── */}
       <div className={styles.tabsRow}>
         <M.button layout whileHover={{ y: -2 }}
           className={`${styles.tab} ${categoryFilter === null && !searchQuery ? styles.activeTab : ''}`}
@@ -125,7 +122,6 @@ export const MainContent: React.FC<Props> = ({
         )}
       </div>
 
-      {/* ── Search results ── */}
       {searchQuery && (
         <div className={styles.searchResults}>
           <p className={styles.searchHint}>
@@ -140,7 +136,6 @@ export const MainContent: React.FC<Props> = ({
         </div>
       )}
 
-      {/* ── Link grid (category view) ── */}
       {!searchQuery && (
         <div className={styles.listArea}>
           {categoryFilter ? (

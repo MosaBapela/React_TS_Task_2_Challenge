@@ -7,7 +7,6 @@ export const getLinksFromStorage = (): Link[] => {
   try {
     const storedLinks = localStorage.getItem(STORAGE_KEY);
     const parsed = storedLinks ? JSON.parse(storedLinks) : [];
-    // ensure backward compatibility: add default category if missing
     return parsed.map((l: any) => ({
       id: l.id,
       title: l.title ?? '',

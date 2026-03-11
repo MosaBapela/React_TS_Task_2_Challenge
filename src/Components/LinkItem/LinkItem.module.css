@@ -1,4 +1,3 @@
-/* ── Card ─────────────────────────────────────────────────────────── */
 .link-item {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -25,7 +24,7 @@
 
 .link-item:hover {
   border-color: var(--border-active);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.35), 0 0 0 1px var(--accent-glow);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   transform: translateY(-4px);
 }
 
@@ -33,13 +32,12 @@
 
 .selected {
   border-color: var(--accent);
-  background: linear-gradient(160deg, rgba(124,58,237,0.08), var(--bg-card));
-  box-shadow: 0 8px 30px var(--accent-glow);
+  background: rgba(124,58,237,0.06);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
 }
 
 .selected::before { opacity: 1; }
 
-/* ── Title ────────────────────────────────────────────────────────── */
 .link-title {
   font-size: 1rem;
   font-weight: 700;
@@ -58,7 +56,6 @@
   text-underline-offset: 3px;
 }
 
-/* ── Category badge ───────────────────────────────────────────────── */
 .link-category {
   display: inline-block;
   font-size: 0.72rem;
@@ -71,16 +68,23 @@
   margin-bottom: 8px;
 }
 
-/* ── URL ──────────────────────────────────────────────────────────── */
 .link-url {
   font-size: 0.8rem;
   color: var(--text-muted);
   margin: 0 0 8px 0;
   word-break: break-all;
   font-family: 'SF Mono', 'Fira Code', monospace;
+  text-decoration: none;
+  display: block;
+  transition: color 0.16s ease;
 }
 
-/* ── Description ──────────────────────────────────────────────────── */
+.link-url:hover {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .link-description {
   font-size: 0.88rem;
   color: var(--text-secondary);
@@ -90,7 +94,6 @@
   line-height: 1.55;
 }
 
-/* ── Tags ─────────────────────────────────────────────────────────── */
 .link-tags {
   margin-top: auto;
   display: flex;
@@ -109,7 +112,6 @@
   border: 1px solid rgba(20,184,166,0.2);
 }
 
-/* ── Actions ──────────────────────────────────────────────────────── */
 .link-actions {
   display: flex;
   gap: 8px;

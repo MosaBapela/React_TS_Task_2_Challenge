@@ -62,7 +62,6 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* ── Navbar ── */}
       <header className="header">
         <div className="header-brand">
           <div className="brand-logo">
@@ -87,7 +86,6 @@ function App() {
         </div>
       </header>
 
-      {/* ── Main page ── */}
       <main className="main-content">
         <MainContent
           links={links}
@@ -100,7 +98,6 @@ function App() {
         />
       </main>
 
-      {/* ── Add / Edit modal ── */}
       {showForm && (
         <FormModal
           onClose={() => { setShowForm(false); setEditingLink(null); }}
@@ -114,7 +111,6 @@ function App() {
         </FormModal>
       )}
 
-      {/* ── Delete confirm modal ── */}
       {showDeleteModal && (
         <Modal
           message="Are you sure you want to delete this link?"
