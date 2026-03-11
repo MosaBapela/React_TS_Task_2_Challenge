@@ -35,11 +35,25 @@ export const LinkItem: React.FC<LinkItemProps> = ({ link, onEdit, onDelete, onSe
       role="button"
       tabIndex={0}
     >
-      <a href={url} target="_blank" rel="noopener noreferrer" className={styles['link-title']} onClick={(e) => e.stopPropagation()}>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles['link-title']}
+        onClick={(e) => e.stopPropagation()}
+      >
         {title}
       </a>
       <div className={styles['link-category']}>{link.category}</div>
-      <p className= {styles['link-url']}>{url}</p>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles['link-url']}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {url}
+      </a>
       {description && <p className= {styles['link-description']}>{description}</p>}
       <div className={styles['link-tags']}>
         {tags.map((tag, index) => (
