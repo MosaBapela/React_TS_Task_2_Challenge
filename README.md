@@ -3,7 +3,7 @@
 A simple links vault app built with React + TypeScript and Vite. Save, search, edit and delete links stored locally in your browser.
 
 ## Live Demo
-[View the live app](https://react-ts-task-2-challenge-nv9z5gvdk-mosabapelas-projects.vercel.app/)
+[View the live app](https://react-ts-task-2-challenge-git-component4-mosabapelas-projects.vercel.app/)
 
 Quick start
 - Install: `npm install`
