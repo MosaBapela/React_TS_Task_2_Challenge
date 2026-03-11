@@ -1,117 +1,113 @@
-.sidebar {
-    width: 350px;
-    flex-shrink: 0;
-    position: sticky; 
-    top: 20px; 
-  }
-  
-  @media (max-width: 768px) {
-    .sidebar {
-      width: 100%;
-      position: static;
-    }
-  }
-  
-  .link-form {
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px; 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    border: 1px solid #e0e0e0;
-  }
-  
-  .link-form h2 {
-    margin-top: 0;
-    color: #007bff;
-    color: var(--ws-accent);
-    font-size: 1.6em;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .form-group {
-    margin-bottom: 18px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 8px; 
-    font-weight: 600; 
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 12px; 
-    border: 1px solid #d0d0d0; 
-    border-radius: 6px; 
-    box-sizing: border-box;
-    font-size: 1em;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  }
+/* ── Form wrapper ─────────────────────────────────────────────────── */
+.link-form {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
 
-  .form-group select {
-    width: 100%;
-    padding: 10px 36px 10px 12px;
-    border: 1px solid #d0d0d0;
-    border-radius: 6px;
-    background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5' stroke='%236b4b3b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") no-repeat right 10px center;
-    appearance: none;
-    -webkit-appearance: none;
-    font-size: 1em;
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: var(--ws-primary); 
-    box-shadow: 0 0 0 4px rgba(255,107,53,0.12); 
-    outline: none;
-  }
-  
-  .form-group textarea {
-    resize: vertical; 
-    min-height: 80px;
-  }
-  
-  .form-actions {
-    display: flex;
-    gap: 15px; 
-    justify-content: center;
-    margin-top: 25px;
-  }
-  
-  .save-button,
-  .cancel-button {
-    padding: 12px 25px; 
-    border: none;
-    border-radius: 6px; 
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.05em;
-    transition: all 0.3s ease; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .save-button {
-      background-color: var(--ws-primary);
-      color: white;
-    }
+.link-form h2 {
+  display: none; /* title shown in modal header */
+}
 
-  .save-button:hover {
-      background-color: #ff804f;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 22px var(--ws-shadow);
-    }
+/* ── Form group ───────────────────────────────────────────────────── */
+.form-group {
+  margin-bottom: 16px;
+}
 
-  .cancel-button {
-      background-color: transparent;
-      color: var(--ws-muted);
-      border: 1px solid rgba(107,75,59,0.06);
-    }
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.3px;
+}
 
-  .cancel-button:hover {
-      background-color: #fff3ee;
-      color: var(--ws-accent);
-      transform: translateY(-2px);
-    }
-  
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 13px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-family: var(--base-font);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--text-muted); }
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--border-active);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5' stroke='%238b949e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 38px;
+}
+
+.form-group select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ── Actions ──────────────────────────────────────────────────────── */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.save-button {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, var(--accent) 0%, #6d28d9 100%);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-accent);
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.save-button:hover { transform: translateY(-2px); filter: brightness(1.1); }
+.save-button:active { transform: translateY(0); }
+
+.cancel-button {
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.cancel-button:hover {
+  background: var(--bg-glass);
+  border-color: var(--border-active);
+  color: var(--text-primary);
+}
